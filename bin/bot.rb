@@ -1,8 +1,4 @@
-require 'telegram/bot'
-require 'dotenv/load'
-require 'pry'
-Dir[File.expand_path 'config/initializers/*.rb'].each { |f| require_relative f }
-require_relative './../lib/message/responder'
+require_relative '../config/boot'
 
 loop do
   Telegram::Bot::Client.run(TELEGRAM_TOKEN) do |bot|
